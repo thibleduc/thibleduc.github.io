@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["A7T2XB49D7.com.leduc.myphotoguesser"],
+        "components": [{ "/": "/MyPhoto-Guesser/join.html*", "comment": "Invitation to a game" }]
+      }
+    ]
+  }
+}
