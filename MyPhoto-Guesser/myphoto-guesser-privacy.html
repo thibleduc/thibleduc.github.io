@@ -21,24 +21,37 @@ nav{margin-bottom:28px;font-size:14px}
 nav a{color:var(--mute);text-decoration:none}
 </style></head><body><main><nav><a href="../">&larr; LDH</a></nav>
 <h1>Privacy Policy — MyPhoto Guesser</h1>
-<p><em>Last updated: 14 October 2026</em></p>
-<p>This policy explains what MyPhoto Guesser ("the app", "the game") does with your data. It covers the iOS app published by LDH ("we", "us").</p>
-<p>MyPhoto Guesser has no accounts, no sign-in, no ads, no in-app purchases, no analytics and no tracking.</p>
+<p><em>Last updated: 15 October 2026</em></p>
+<p>This policy explains what MyPhoto Guesser ("the app", "the game") does with your data, why, and what you can do about it. It covers the iOS app published by LDH ("we", "us").</p>
+<p>MyPhoto Guesser has no ads, no in-app purchases, no analytics and no tracking. There is no account to create: games with friends use your iCloud account, managed by Apple.</p>
 <h2>Short version</h2>
-<ul><li>The app plays with your own photos, <strong>on your iPhone only</strong>. No photo is ever uploaded.</li><li>We collect no data at all. The app's App Store listing states "Data Not Collected".</li><li>No ads, no analytics, no tracking, no data sold.</li></ul>
+<ul><li><strong>Solo games happen entirely on your iPhone.</strong> The app reads your photo library to find geotagged photos and videos; nothing leaves your device.</li><li><strong>Games with friends are the only thing sent online</strong>, and only when you create or play one: the photos and videos you pick, their location and date, your nickname and your scores, stored in the app's iCloud database run by Apple.</li><li><strong>You stay in control:</strong> you choose every photo you share, and you can delete a game you created at any time from the app.</li><li>No ads, no analytics, no tracking, no data sold.</li></ul>
 <h2>What stays on your device</h2>
-<ul><li><strong>Your photo library.</strong> With your permission, the app reads the photos that have a GPS location, shows them to you and compares your guess with their location. If you give limited access, only the photos you selected are used. Photos and their locations are never sent to us or to anyone else.</li><li><strong>Photo analysis.</strong> To only play photos showing people, landscapes or food, the app analyses them with Apple's on-device Vision framework. The result (play / skip) is cached on your device. Nothing is uploaded.</li><li><strong>Your settings</strong>: number of rounds and time per round.</li></ul>
-<p>Deleting the app deletes all of this. We hold no copy and cannot restore it.</p>
+<ul><li><strong>Your photo library.</strong> With your permission, the app reads the photos and videos that have a GPS location, shows them to you and compares your guesses with their location and the year they were taken. If you give limited access, only the photos you selected are used.</li><li><strong>Photo analysis.</strong> To only play photos and videos worth guessing, and to let you filter them by type (people, landscapes, cities, beach, mountain, animals, food), the app analyses a small preview of each one with Apple's on-device Vision framework. The result is cached on your device. Nothing is uploaded.</li><li><strong>Your settings and history</strong>: number of rounds, time per round, your nickname, the list of games you created or joined.</li></ul>
+<p>Deleting the app deletes all of this.</p>
+<h2>What is sent online: games with friends</h2>
+<p>Games with friends are stored in the app's <strong>public CloudKit database</strong>, a service operated by Apple on behalf of the app. Playing with friends requires being signed in to iCloud.</p>
+<p><strong>When you create a game</strong>, the app uploads:</p>
+<ul><li>the photos you picked, re-encoded at a maximum of 1600 pixels <strong>without their metadata</strong> (no EXIF, no camera details);</li><li>the videos you picked, re-encoded in 720p and cut to their first 15 seconds, <strong>without their metadata</strong> (no location, no camera details);</li><li>the GPS coordinates and date of each photo, stored separately so that scores can be computed and the location revealed after each answer;</li><li>the game title, your nickname and the time per round.</li></ul>
+<p><strong>When you play a game</strong>, the app uploads your nickname, your total score, your points per round, the position of each of your guesses and the years you guessed.</p>
+<p><strong>When you report a game</strong>, the app uploads the game code and the reason you picked.</p>
+<p><strong>Who can see it.</strong> Anyone who has the 6-character game code, the QR code or the invitation link can play the game, see its photos, their locations and dates after each answer, and the leaderboard (nicknames and total scores). Only share photos you are happy to share with the people you invite, and only photos of people who agree.</p>
+<p><strong>Identifiers.</strong> CloudKit attaches to each record an anonymous identifier, specific to this app, derived from your iCloud account. We cannot see your Apple ID, name or email address. It is only used to keep one score per player and to know who created a game.</p>
+<p><strong>How long it is kept.</strong> A game and its photos are kept until its creator deletes it (open the game, then "Delete this game"). Scores and reports are kept with the game's code. We may delete reported games. To have your scores or any other record deleted, write to us with the game code and your nickname.</p>
 <h2>Maps and place names</h2>
-<p>Maps are displayed with Apple Maps (MapKit). After each round, the app asks Apple for the name of the place where the photo was taken (for example "Paris, France"): the photo's coordinates are sent to Apple for that purpose only, without the photo. This is handled by Apple under Apple's privacy policy; we receive nothing.</p>
+<p>Maps are displayed with Apple Maps (MapKit). After each round, the app asks Apple for the name of the place where the photo was taken (for example "Paris, France"): the photo's coordinates are sent to Apple for that purpose. This is covered by Apple's privacy policy.</p>
 <h2>What we do NOT do</h2>
-<ul><li>We do not upload your photos or their locations.</li><li>We do not show ads and do not use any advertising or analytics SDK.</li><li>We do not ask for your name, email address, phone number or contacts.</li><li>We do not track you across other companies' apps or websites.</li><li>We do not sell or rent any data.</li></ul>
+<ul><li>We do not show ads and do not use any advertising or analytics SDK.</li><li>We do not track you across other companies' apps or websites.</li><li>We do not upload any photo you did not explicitly put in a game with friends.</li><li>We do not sell or rent any data.</li></ul>
 <h2>Crash and diagnostic data</h2>
-<p>If the app crashes, Apple may share technical details about the failure with us if you have chosen to share analytics with developers in your iPhone settings — device model, OS version, and where in the code it happened. This is handled by Apple and contains nothing about you.</p>
+<p>If the app crashes, Apple may share technical details about the failure with us if you have chosen to share analytics with developers in your iPhone settings. This is handled by Apple and contains nothing about you.</p>
+<h2>Invitation page</h2>
+<p>The invitation link and QR code open a page on thibleduc.github.io (GitHub Pages) that only reads the game code from the link and opens the app. It sets no cookie and runs no analytics. GitHub may log technical data about visits under its own privacy statement.</p>
+<h2>Children</h2>
+<p>The app is not directed at children under 13, and we do not knowingly collect data from them.</p>
 <h2>Your rights</h2>
-<p>If you are in the European Union or the United Kingdom, the GDPR gives you the right to access, correct, delete or object to the processing of your data, and to lodge a complaint with your national data protection authority. If you are a California resident, the CCPA gives you the right to know what is collected and to request its deletion. Since MyPhoto Guesser collects no personal data, we hold nothing about you; you can still write to us with any question.</p>
+<p>If you are in the European Union or the United Kingdom, the GDPR gives you the right to access, correct, delete or object to the processing of your data, and to lodge a complaint with your national data protection authority. If you are a California resident, the CCPA gives you the right to know what is collected and to request its deletion. You can delete your own games directly in the app; for anything else, write to us.</p>
 <h2>Changes</h2>
-<p>If a future version adds features that send data online, this policy will be updated before that version is released, with a new date.</p>
+<p>If this policy changes, the new version will be published at this address with a new date.</p>
 <h2>Contact</h2>
 <p>LDH — Thibault Leduc — <a href="mailto:leducholding@gmail.com.">leducholding@gmail.com.</a> We answer within 30 days.</p>
 </main></body></html>

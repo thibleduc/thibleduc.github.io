@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Join a game — MyPhoto Guesser</title>
+<style>
+:root{--bg:#0c0a29;--card:#15123d;--ink:#e9e7ff;--mute:#a9a5d6;--accent:#7b4dff;--line:#2a2660}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:48px 22px 80px}
+h1{font-size:30px;line-height:1.2;margin:0 0 8px}
+h2{font-size:21px;margin:40px 0 10px;padding-top:24px;border-top:1px solid var(--line)}
+h3{font-size:17px;margin:28px 0 6px}
+p,li{color:var(--ink)}
+.mute{color:var(--mute)}
+a{color:#b9a4ff}
+hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+code{background:var(--card);padding:1px 6px;border-radius:5px;font-size:.92em}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0;text-decoration:none;color:var(--ink)}
+.card b{display:block;font-size:18px;margin-bottom:2px}
+nav{margin-bottom:28px;font-size:14px}
+nav a{color:var(--mute);text-decoration:none}
+</style></head><body><main><nav><a href="../">&larr; LDH</a></nav>
+<h1>Join the game</h1>
+<p class="mute">You have been invited to a MyPhoto Guesser game.</p>
+<div class="card"><span class="mute">Game code</span><b id="code" style="font-size:34px;letter-spacing:6px;color:#fecd19">——————</b></div>
+<p><a id="open" class="card" style="text-align:center;background:#479440;border-color:#97e851" href="#"><b>Open in MyPhoto Guesser</b></a></p>
+<h2>Don't have the app yet?</h2>
+<p>MyPhoto Guesser is coming soon to the App Store. Then come back to this page, or open the app, tap <strong>Join</strong> and type the code above.</p>
+<script>
+// Avec l'app installée, iOS ouvre directement l'app (liens universels) : cette page ne s'affiche
+// que pour ceux qui ne l'ont pas encore. On les envoie vers l'App Store ; le bouton reste là au cas
+// où les liens universels seraient désactivés.
+var c=(new URLSearchParams(location.search).get('code')||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
+if(c){document.getElementById('code').textContent=c;
+document.getElementById('open').href='myphotoguesser://challenge/'+c;}
+var store='';
+if(store&&/iPhone|iPad|iPod/.test(navigator.userAgent)){setTimeout(function(){location.href=store;},400);}
+</script>
+</main></body></html>
