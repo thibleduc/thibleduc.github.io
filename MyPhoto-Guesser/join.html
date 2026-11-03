@@ -25,7 +25,7 @@ nav a{color:var(--mute);text-decoration:none}
 <div class="card"><span class="mute">Game code</span><b id="code" style="font-size:34px;letter-spacing:6px;color:#fecd19">——————</b></div>
 <p><a id="open" class="card" style="text-align:center;background:#479440;border-color:#97e851" href="#"><b>Open in MyPhoto Guesser</b></a></p>
 <h2>Don't have the app yet?</h2>
-<p>MyPhoto Guesser is coming soon to the App Store. Then come back to this page, or open the app, tap <strong>Join</strong> and type the code above.</p>
+<p>MyPhoto Guesser is coming soon to the App Store and Google Play. Then come back to this page, or open the app, tap <strong>Join</strong> and type the code above.</p>
 <script>
 // Avec l'app installée, iOS ouvre directement l'app (liens universels) : cette page ne s'affiche
 // que pour ceux qui ne l'ont pas encore. On les envoie vers l'App Store ; le bouton reste là au cas
@@ -33,7 +33,8 @@ nav a{color:var(--mute);text-decoration:none}
 var c=(new URLSearchParams(location.search).get('code')||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
 if(c){document.getElementById('code').textContent=c;
 document.getElementById('open').href='myphotoguesser://challenge/'+c;}
-var store='';
+var store='', play='';
 if(store&&/iPhone|iPad|iPod/.test(navigator.userAgent)){setTimeout(function(){location.href=store;},400);}
+if(play&&/Android/.test(navigator.userAgent)){setTimeout(function(){location.href=play;},400);}
 </script>
 </main></body></html>
